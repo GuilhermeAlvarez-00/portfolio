@@ -1,5 +1,10 @@
+import { HomeHero } from '../components/pages/HomeHero'
+import { Container } from '../styles/homePageStyles'
+
 export default function Home() {
   return (
-    <h2>Hello World</h2>
+    <Container>
+      <HomeHero />
+    </Container>
   )
 }

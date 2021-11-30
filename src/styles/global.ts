@@ -28,6 +28,11 @@ export const GlobalStyles = createGlobalStyle`
     font: 300 1rem 'Poppins', sans-serif;
   }
 
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
+
   button {
     cursor: pointer;
   }

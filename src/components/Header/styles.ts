@@ -43,6 +43,8 @@ export const NavLinkContainer = styled.li<NavLinkContainerProps>`
       }
 
       ${props => props.isActive ? css`
+        font-weight: 500;
+        
         &:after {
           content: '';
           position: absolute;

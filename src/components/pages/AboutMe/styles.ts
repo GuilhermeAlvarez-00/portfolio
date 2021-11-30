@@ -20,7 +20,7 @@ export const Container = styled.section`
 `
 
 export const CodeDescription = styled.div`
-  width: 100%;
+  width: 80%;
   color: ${({ theme }) => theme.pink500};
   font-size: 1.5rem;
   margin-top: 2rem;
@@ -32,5 +32,9 @@ export const CodeDescription = styled.div`
   div {
     padding-left: 2rem;
     margin: 1rem 0;
+  }
+
+  @media (max-width: 750px) {
+    width: 100%;
   }
 `

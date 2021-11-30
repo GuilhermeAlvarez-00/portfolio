@@ -20,4 +20,14 @@ export const TitleContainer = styled.div`
       background: ${({ theme }) => theme.pink500};
     }
   }
+
+  @media (max-width: 750px) {
+    h1 {
+      font-size: 2rem;
+
+      &::before {
+        height: 38px;
+      }
+    }
+  }
 `

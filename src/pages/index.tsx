@@ -1,4 +1,5 @@
 import { AboutMe } from '../components/pages/AboutMe'
+import { Knowledge } from '../components/pages/Knowledge'
 import { HomeHero } from '../components/pages/HomeHero'
 import { MyProjects } from '../components/pages/MyProjects'
 
@@ -10,6 +11,7 @@ export default function Home() {
       <HomeHero />
       <AboutMe />
       <MyProjects />
+      <Knowledge />
     </Container>
   )
 }

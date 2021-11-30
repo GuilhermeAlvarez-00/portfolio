@@ -26,6 +26,8 @@ export const GlobalStyles = createGlobalStyle`
 
   body, input, textarea, select, button {
     font: 300 1rem 'Poppins', sans-serif;
+    position: relative;
+    overflow-x: hidden;
   }
 
   img {

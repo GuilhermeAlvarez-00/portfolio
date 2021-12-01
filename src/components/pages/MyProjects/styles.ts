@@ -7,7 +7,7 @@ interface ProjectContainerProps {
 
 export const MyProjectsContainer = styled.section`
   width: 100%;
-  padding: 8rem 2rem;
+  padding: 6rem 2rem;
 
   @media (max-width: 750px) {
     padding: 4rem 2rem;

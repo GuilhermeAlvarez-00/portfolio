@@ -4,6 +4,7 @@ import { HomeHero } from '../components/pages/HomeHero'
 import { MyProjects } from '../components/pages/MyProjects'
 
 import { Container } from '../styles/homePageStyles'
+import { Contact } from '../components/pages/Contact'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <AboutMe />
       <MyProjects />
       <Knowledge />
+      <Contact />
     </Container>
   )
 }

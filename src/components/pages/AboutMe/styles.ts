@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const AboutMeContainer = styled.section`
   width: 100%;
-  padding: 8rem 2rem;
+  padding: 6rem 2rem;
   background: ${({ theme }) => theme.blue900};
 
   @media (max-width: 750px) {

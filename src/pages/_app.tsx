@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components'
 import { theme } from '../styles/theme'
 import { GlobalStyles } from '../styles/global'
 import { Header } from '../components/Header'
+import { Footer } from '../components/Footer'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -11,6 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalStyles />
       <Header />
       <Component {...pageProps} />
+      <Footer />
     </ThemeProvider>
   )
 }

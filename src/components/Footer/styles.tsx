@@ -25,6 +25,7 @@ export const Container = styled.section`
       width: 2rem;
       height: 2rem;
       transition: 0.2s;
+      cursor: pointer;
 
       &:nth-child(1) {
         margin-right: 1rem;

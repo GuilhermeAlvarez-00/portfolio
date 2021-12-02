@@ -18,7 +18,7 @@ export function NavLink({
 
   function verifyIsActive() {
     if(includes) {
-      router.pathname.includes(path)
+      return router.pathname.includes(path)
     }
 
     return path === router.pathname

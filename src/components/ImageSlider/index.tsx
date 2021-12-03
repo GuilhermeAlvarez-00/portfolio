@@ -26,7 +26,7 @@ export function ImageSlider() {
       <IoIosArrowBack onClick={prevImage} />
       {ImageData.map((image, index) => {
         return (
-          <div className={index === current ? 'slide active' : 'slide'}>
+          <div key={index} className={index === current ? 'slide active' : 'slide'}>
             {index == current && <img src={image.url} alt="Image" />}
           </div>
         )

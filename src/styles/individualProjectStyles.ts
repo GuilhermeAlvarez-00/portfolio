@@ -1,6 +1,10 @@
 import { darken } from "polished";
 import styled from "styled-components";
 
+interface TitleSectionProps {
+  text: string;
+}
+
 export const IndividualProjectContainer = styled.main`
   width: 100%;
   padding: 6rem 2rem;
@@ -12,24 +16,24 @@ export const Container = styled.section`
   margin: 0 auto;
 `
 
-export const AboutProject = styled.section`
-  h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    position: relative;
+export const TitleSection = styled.h2`
+  font-size: 2rem;
+  font-weight: 700;
+  position: relative;
 
-    &::before {
-      content: '';
-      width: 8px;
-      height: 28px;
-      position: absolute;
-      top: 50%;
-      left: -20px;
-      transform: translateY(-50%);
-      background: ${({ theme }) => theme.pink500};
-    }
+  &::before {
+    content: '';
+    width: 8px;
+    height: 28px;
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    background: ${({ theme }) => theme.pink500};
   }
+`
 
+export const AboutProject = styled.section`
   > div {
     width: 100%;
     padding: 2rem;
@@ -77,5 +81,13 @@ export const AboutProject = styled.section`
     @media (max-width: 750px) {
       flex-direction: column;
     }
+  }
+`
+
+export const TechnologiesProject = styled.section`
+  margin-top: 6rem;
+
+  p {
+    font-size: 1.5rem;
   }
 `

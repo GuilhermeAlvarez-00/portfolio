@@ -1,12 +1,17 @@
-import { Title } from '../../components/Title'
-import { IndividualProjectContainer, Container, AboutProject } from '../../styles/individualProjectStyles'
+import { 
+  IndividualProjectContainer, 
+  Container, 
+  AboutProject,
+  TitleSection,
+  TechnologiesProject
+} from '../../styles/individualProjectStyles'
 
 export default function IndividualProject() {
   return (
     <IndividualProjectContainer>
       <Container>
         <AboutProject>
-          <h2>Projeto 01</h2>
+          <TitleSection>Projeto 01</TitleSection>
           <div>
             <img src="https://images.prismic.io/guilherme-portfolio/091d85fd-1486-409a-aad5-315951adc635_projetoex3.jpeg?auto=compress,format" alt="" />
 
@@ -24,6 +29,11 @@ export default function IndividualProject() {
             </article>
           </div>
         </AboutProject>
+
+        <TechnologiesProject>
+          <TitleSection>Tecnologias</TitleSection>
+          <p>NextJS, Typescript, NodeJS, Styled-components</p>
+        </TechnologiesProject>
       </Container>
     </IndividualProjectContainer>
   )

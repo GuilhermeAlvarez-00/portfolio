@@ -15,7 +15,7 @@ export default function IndividualProject() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt officiis, maiores quas rerum.
               </p>
               <button>
-                Repositorio
+                Repositório
               </button>
 
               <button>

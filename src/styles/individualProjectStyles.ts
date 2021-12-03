@@ -36,6 +36,7 @@ export const AboutProject = styled.section`
     background: ${({ theme }) => theme.blue900};
     margin-top: 2rem;
     display: flex;
+    align-items: center;
     gap: 2rem;
     border-radius: 5px;
 
@@ -71,6 +72,10 @@ export const AboutProject = styled.section`
       &:hover {
         background: ${({ theme }) => darken(0.05, theme.pink500)};
       }
+    }
+
+    @media (max-width: 750px) {
+      flex-direction: column;
     }
   }
 `

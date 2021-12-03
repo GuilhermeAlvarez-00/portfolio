@@ -1,9 +1,12 @@
+import { ImageSlider } from '../../components/ImageSlider'
+
 import { 
   IndividualProjectContainer, 
   Container, 
   AboutProject,
   TitleSection,
-  TechnologiesProject
+  TechnologiesProject,
+  ProjectPhotos,
 } from '../../styles/individualProjectStyles'
 
 export default function IndividualProject() {
@@ -34,6 +37,12 @@ export default function IndividualProject() {
           <TitleSection>Tecnologias</TitleSection>
           <p>NextJS, Typescript, NodeJS, Styled-components</p>
         </TechnologiesProject>
+
+        <ProjectPhotos>
+          <TitleSection>Fotos do projeto</TitleSection>
+
+          <ImageSlider />
+        </ProjectPhotos>
       </Container>
     </IndividualProjectContainer>
   )

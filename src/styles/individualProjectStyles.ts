@@ -91,3 +91,11 @@ export const TechnologiesProject = styled.section`
     font-size: 1.5rem;
   }
 `
+
+export const ProjectPhotos = styled.section`
+  margin-top: 6rem;
+
+  section {
+    margin-top: 2rem;
+  }
+`

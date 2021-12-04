@@ -27,7 +27,12 @@ export function ImageSlider() {
       {ImageData.map((image, index) => {
         return (
           <div key={index} className={index === current ? 'slide active' : 'slide'}>
-            {index == current && <img src={image.url} alt="Image" />}
+            {index == current && (
+              <>
+                <p>{image.title}</p>
+                <img src={image.url} alt={image.alt} />
+              </>
+            )}
           </div>
         )
       })}

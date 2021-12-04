@@ -24,6 +24,11 @@ export const Container = styled.section`
     transform: scale(0.8);
     transition: 0.2s;
     opacity: 0;
+    text-align: center;
+
+    p {
+      margin-bottom: 1rem;
+    }
 
     &.active {
       transform: scale(1);

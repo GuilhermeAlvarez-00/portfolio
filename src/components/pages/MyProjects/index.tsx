@@ -5,19 +5,31 @@ import { ProjectItem } from "./projectItem";
 
 import { Container, MyProjectsContainer } from "./styles";
 
-export function MyProjects() {
+interface Projects {
+  slug: string;
+  title: string
+  url: string;
+}
+
+interface MyProjectsProps {
+  projects: Projects[]
+}
+
+export function MyProjects({ projects }: MyProjectsProps) {
   return (
     <MyProjectsContainer>
       <Container>
         <Title text="Projetos" />
 
         <div>
-          <ProjectItem
-            title="Projeto 01"
-            type="Website"
-            slug="projeto-01"
-            imgUrl="https://images.prismic.io/guilherme-portfolio/091d85fd-1486-409a-aad5-315951adc635_projetoex3.jpeg?auto=compress,format"
-          />
+          {projects && projects.slice(0, 3).map(project => (
+            <ProjectItem
+              title={project.title}
+              type="Website"
+              slug={project.slug}
+              imgUrl={project.url}
+            />
+          ))}
         </div>
         <button>
           <Link href="/projetos">

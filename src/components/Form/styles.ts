@@ -5,7 +5,7 @@ export const Container = styled.form`
   width: 100%;
   background: ${({ theme }) => theme.blue900};
   box-shadow: 0.1px 0.1px 4px 1px #FF2359;
-  border-radius: 4px;
+  border-radius: 0.2rem;
   padding: 2rem;
   display: flex;
   align-items: center;

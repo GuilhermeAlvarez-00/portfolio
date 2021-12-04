@@ -15,13 +15,12 @@ export const Container = styled.div<ContainerProps>`
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
     transition: 0.5s;
     cursor: pointer;
     overflow: hidden;
-    &:hover {
-      border-color: ${({ theme }) => theme.pink500};
 
+    &:hover {
       > div.overlay {
         opacity: 0.5;
       }

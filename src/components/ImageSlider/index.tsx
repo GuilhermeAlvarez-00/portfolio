@@ -1,15 +1,21 @@
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
 import { useState } from 'react'
 
-import { ImageData } from './imageData'
-
 import { Container } from "./styles";
 
-const slides = ImageData
+interface ImageSlider {
+  text: string;
+  url: string;
+  alt: string;
+}
 
-export function ImageSlider() {
+interface ImageSliderProps {
+  photos: ImageSlider[]
+}
+
+export function ImageSlider({ photos }: ImageSliderProps) {
   const [current, setCurrent] = useState(0)
-  const length = slides.length
+  const length = photos.length
 
   function nextImage() {
     setCurrent(current === length - 1 ? 0 : current + 1)
@@ -18,24 +24,20 @@ export function ImageSlider() {
   function prevImage() {
     setCurrent(current === 0 ? length - 1 : current - 1)
   }
-
-  console.log(current)
-
+  
   return (
     <Container>
       <IoIosArrowBack onClick={prevImage} />
-      {ImageData.map((image, index) => {
-        return (
+      {photos.map((image, index) => (
           <div key={index} className={index === current ? 'slide active' : 'slide'}>
-            {index == current && (
-              <>
-                <p>{image.title}</p>
-                <img src={image.url} alt={image.alt} />
-              </>
-            )}
-          </div>
-        )
-      })}
+              {index == current && (
+                <>
+                  <p>{image.text}</p>
+                  <img src={image.url} alt={image.alt} />
+                </>
+              )}
+            </div>
+      ))}
       <IoIosArrowForward onClick={nextImage} />
     </Container>
   )

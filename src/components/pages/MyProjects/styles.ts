@@ -55,6 +55,7 @@ export const ProjectContainer = styled.div<ProjectContainerProps>`
     background-size: cover;
     background-position: center;
     position: relative;
+    border-radius: 0.2rem;
 
     div.overlay {
       position: absolute;

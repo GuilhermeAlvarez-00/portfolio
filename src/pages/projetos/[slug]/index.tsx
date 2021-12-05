@@ -75,7 +75,7 @@ export default function IndividualProject({ project }: ProjectProps) {
         <ProjectPhotos>
           <TitleSection>Fotos do projeto</TitleSection>
 
-          <ImageSlider key={project.slug} photos={project.photos} />
+          <ImageSlider photos={project.photos} />
         </ProjectPhotos>
       </Container>
     </IndividualProjectContainer>

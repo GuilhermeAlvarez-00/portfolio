@@ -24,6 +24,7 @@ export function MyProjects({ projects }: MyProjectsProps) {
         <div>
           {projects && projects.slice(0, 3).map(project => (
             <ProjectItem
+              key={project.slug}
               title={project.title}
               type="Website"
               slug={project.slug}

@@ -11,7 +11,7 @@ import { Container, KnowledgeContainer, Technologies } from "./styles";
 export function Knowledge() {
   return (
     <KnowledgeContainer>
-      <Container>
+      <Container data-aos="fade-up">
         <Title text="Conhecimentos" />
 
         <Technologies>

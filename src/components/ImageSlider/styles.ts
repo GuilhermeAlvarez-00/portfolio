@@ -37,7 +37,7 @@ export const Container = styled.section`
 
     img {
       width: 45rem;
-      height: 30rem;
+      height: 25rem;
       border-radius: 4px;
 
       @media (max-width: 780px) {

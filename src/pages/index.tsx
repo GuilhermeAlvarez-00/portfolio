@@ -1,5 +1,7 @@
 import { GetStaticProps } from 'next'
 import Prismic from '@prismicio/client'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 import { AboutMe } from '../components/pages/AboutMe'
 import { Knowledge } from '../components/pages/Knowledge'
@@ -9,6 +11,7 @@ import { Contact } from '../components/pages/Contact'
 import { getPrismicClient } from '../services/prismic'
 
 import { Container } from '../styles/homePageStyles'
+import { useEffect } from 'react'
 
 interface Projects {
   slug: string;
@@ -17,14 +20,19 @@ interface Projects {
 }
 
 interface HomeProps {
-  projects: Projects[]
+  projects: Projects[],
+  about: string;
 }
 
-export default function Home({ projects }: HomeProps) {
+export default function Home({ projects, about }: HomeProps) {
+  useEffect(() => {
+    Aos.init({ duration: 1000 })
+  }, [])
+
   return (
     <Container>
       <HomeHero />
-      <AboutMe />
+      <AboutMe about={about}/>
       <MyProjects
         projects={projects}
       />
@@ -42,6 +50,10 @@ export const getStaticProps: GetStaticProps = async () => {
     { orderings: '[document.first_publication_date] desc' }
   )
 
+  const aboutResponse = await prismic.getSingle('sobre', {})
+
+  const about = aboutResponse.data.content
+
   const projects = response.results.map(project => ({
     slug: project.uid,
     title: project.data.title,
@@ -50,7 +62,8 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      projects
+      projects,
+      about
     },
     revalidate: 86400 // 24 hours
   }

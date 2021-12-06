@@ -5,7 +5,7 @@ import { ContactContainer, Container } from './styles'
 export function Contact() {
   return (
     <ContactContainer>
-      <Container>
+      <Container data-aos="fade-up">
         <Title text="Precisando dos meus serviços?" />
 
         <section>

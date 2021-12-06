@@ -17,7 +17,7 @@ export function ProjectItem({
   imgUrl
 }: ProjectItemProps) {
   return (
-    <ProjectContainer imgUrl={imgUrl} data-aos="fade-right">
+    <ProjectContainer imgUrl={imgUrl} data-aos="fade-up">
       <section>
         <div className="overlay" />
         <div className="text-content">

@@ -27,6 +27,11 @@ export const Container = styled.form`
     &:hover {
       background: ${({ theme }) => darken(0.05, theme.pink500)};
     }
+
+    &:disabled {
+      filter: brightness(0.8);
+      cursor: not-allowed;
+    }
   }
 `
 

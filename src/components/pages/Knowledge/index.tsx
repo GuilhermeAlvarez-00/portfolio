@@ -1,7 +1,7 @@
 import { AiFillHtml5 } from 'react-icons/ai'
-import { FaCss3Alt, FaReact, FaNodeJs } from 'react-icons/fa'
+import { FaCss3Alt, FaReact, FaNodeJs, FaSass } from 'react-icons/fa'
 import { IoLogoJavascript } from 'react-icons/io5'
-import { SiNextdotjs } from 'react-icons/si'
+import { SiNextdotjs, SiTypescript, SiStyledcomponents, SiMongodb } from 'react-icons/si'
 
 import { Title } from "../../Title";
 import { TechnologyItem } from "./technologyItem";
@@ -24,8 +24,20 @@ export function Knowledge() {
             icon={<FaCss3Alt />}
           />
           <TechnologyItem
+            text="SASS"
+            icon={<FaSass />}
+          />
+          <TechnologyItem
             text="Javascript"
             icon={<IoLogoJavascript />}
+          />
+          <TechnologyItem
+            text="Typescript"
+            icon={<SiTypescript />}
+          />
+          <TechnologyItem
+            text="Styled-components"
+            icon={<SiStyledcomponents />}
           />
           <TechnologyItem
             text="ReactJS"
@@ -38,6 +50,10 @@ export function Knowledge() {
           <TechnologyItem
             text="NodeJS"
             icon={<FaNodeJs />}
+          />
+          <TechnologyItem
+            text="MongoDB"
+            icon={<SiMongodb />}
           />
         </Technologies>
       </Container>

@@ -36,9 +36,13 @@ export const TechnologyContainer = styled.div`
   }
 
   svg {
-    width: 6rem;
-    height: 6rem;
+    width: 4rem;
+    height: 4rem;
     transition: 0.2s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   @media (max-width: 750px) {

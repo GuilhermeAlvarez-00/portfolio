@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next'
+import Head from 'next/head'
 import { getPrismicClient } from '../../services/prismic'
 import Prismic from '@prismicio/client'
 
@@ -19,6 +20,18 @@ interface ProjectsProps {
 export default function Projects({ projects }: ProjectsProps) {
   return (
     <Container>
+      <Head>
+        <title>Projetos - Dev Guilherme</title>
+        <meta name="description" content="Aqui você pode encontrar todos os projetos que ja desenvolvi" />
+        <meta property="og:image" content="/ogimage.png" />
+        <meta property="og:image:secure_url" content="/ogimage.png" />
+        <meta name="twitter:image" content="/ogimage.png" />
+        <meta name="twitter:image:src" content="/ogimage.png" />
+        <meta
+          property="og:description"
+          content="Aqui você pode encontrar todos os projetos que ja desenvolvi"
+        />
+      </Head>
       <section>
         {projects.map(project => (
           <AllProjects

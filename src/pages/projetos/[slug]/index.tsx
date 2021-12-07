@@ -1,4 +1,5 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
+import Head from 'next/head'
 import Prismic from '@prismicio/client'
 
 import { ImageSlider } from '../../../components/ImageSlider'
@@ -49,6 +50,18 @@ export default function IndividualProject({ project }: ProjectProps) {
 
   return (
     <IndividualProjectContainer>
+      <Head>
+        <title>{project.title} - Dev Guilherme</title>
+        <meta name="description" content={project.description} />
+        <meta property="og:image" content={project.thumbnail} />
+        <meta property="og:image:secure_url" content={project.thumbnail} />
+        <meta name="twitter:image" content={project.thumbnail} />
+        <meta name="twitter:image:src" content={project.thumbnail} />
+        <meta
+          property="og:description"
+          content={project.description}
+        />
+      </Head>
       <Container>
         <AboutProject>
           <TitleSection>{project.title}</TitleSection>

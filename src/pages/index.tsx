@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next'
+import Head from 'next/head'
 import Prismic from '@prismicio/client'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
@@ -31,6 +32,18 @@ export default function Home({ projects, about }: HomeProps) {
 
   return (
     <Container>
+      <Head>
+        <title>Início - Dev Guilherme</title>
+        <meta name="description" content="Sou desenvolvedor front-end e esse é meu portfólio onde voçê pode conhecer mais de mim, ver os projetos que ja desenvolvi e caso tenha interesse em meus serviços é só deixar uma mensagem no formulário abaixo" />
+        <meta property="og:image" content="/ogimage.png" />
+        <meta property="og:image:secure_url" content="/ogimage.png" />
+        <meta name="twitter:image" content="/ogimage.png" />
+        <meta name="twitter:image:src" content="/ogimage.png" />
+        <meta
+          property="og:description"
+          content="Sou desenvolvedor front-end e esse é meu portfólio onde voçê pode conhecer mais de mim, ver os projetos que ja desenvolvi e caso tenha interesse em meus serviços é só deixar uma mensagem no formulário abaixo"
+        />
+      </Head>
       <HomeHero />
       <AboutMe about={about}/>
       <MyProjects

@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const HomeHeroContainer = styled.section`
   width: 100%;
   padding: 9rem 2rem;
+  overflow-x: hidden;
 
   @media (max-width: 750px) {
     padding: 3rem 2rem;

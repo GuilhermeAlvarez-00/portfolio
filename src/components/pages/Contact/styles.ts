@@ -66,6 +66,10 @@ export const Container = styled.div`
       p {
         font-size: 2rem;
       }
+
+      a > svg {
+        font-size: 18rem;
+      }
     }
   }
 `

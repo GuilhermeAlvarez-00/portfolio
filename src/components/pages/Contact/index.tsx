@@ -13,7 +13,7 @@ export function Contact() {
 
         <section>
           <p>
-            Clique na imagem para me mandar um email que em breve retornarei ;)
+            Clique na imagem para me mandar um email que em breve entrarei em contato ;)
           </p>
 
           <Link href="mailto:gui06barboza@gmail.com" >

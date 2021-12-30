@@ -27,6 +27,39 @@ export const Container = styled.div`
       font-weight: 500;
     }
 
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    a > svg{
+      font-size: 24rem;
+      animation-name: email;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      transition: 0.2s;
+    }
+
+    a svg:hover {
+      color: ${({theme}) => theme.pink500};
+    }
+
+    @keyframes email {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.08);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
     @media (max-width: 780px) {
       flex-direction: column;
 

@@ -1,5 +1,8 @@
+import Link from 'next/link'
 import { Form } from '../../Form'
 import { Title } from '../../Title'
+import { MdEmail } from 'react-icons/md'
+
 import { ContactContainer, Container } from './styles'
 
 export function Contact() {
@@ -10,10 +13,15 @@ export function Contact() {
 
         <section>
           <p>
-            Preencha o formulário que logo entrarei em contato ;)
+            Clique na imagem para me mandar um email que em breve retornarei ;)
           </p>
 
-          <Form />
+          <Link href="mailto:gui06barboza@gmail.com" >
+            <a>
+              <MdEmail />
+              gui06barboza@gmail.com
+            </a>
+          </Link>
         </section>
       </Container>
     </ContactContainer>

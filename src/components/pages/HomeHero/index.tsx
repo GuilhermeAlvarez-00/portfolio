@@ -52,7 +52,7 @@ export function HomeHero() {
         <ImageContent data-aos="fade-left">
           <img src="/developer.svg" alt="imagem" />
           <span>
-            "Nunca pare <br /> de aprender"
+            &#34;Nunca pare <br /> de aprender&#34;
           </span>
         </ImageContent>
       </Container>

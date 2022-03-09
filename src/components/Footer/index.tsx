@@ -1,16 +1,13 @@
-import {
-  AiOutlineGithub,
-  AiFillLinkedin
-} from 'react-icons/ai';
+import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai'
 import { AiOutlineUpCircle } from 'react-icons/ai'
 
-import { ContainerFooter, Container } from "./styles";
+import { Container, ContainerFooter } from './styles'
 
 export function Footer() {
   function handleBackToTop() {
     window.scroll({
       top: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
     })
   }
 
@@ -29,15 +26,21 @@ export function Footer() {
         <p>Guilherme Alvarez Barboza</p>
 
         <section>
-          <AiOutlineGithub 
-            onClick={() => redirectToLink('https://github.com/GuilhermeAlvarez-00')} 
+          <AiOutlineGithub
+            onClick={() =>
+              redirectToLink('https://github.com/GuilhermeAlvarez-00')
+            }
           />
 
-          <AiFillLinkedin 
-            onClick={() => redirectToLink('https://www.linkedin.com/in/guilherme-alvarez-barboza-44388318b/')} 
+          <AiFillLinkedin
+            onClick={() =>
+              redirectToLink(
+                'https://www.linkedin.com/in/guilherme-alvarez-barboza-44388318b/'
+              )
+            }
           />
         </section>
       </Container>
-    </ContainerFooter>   
+    </ContainerFooter>
   )
 }

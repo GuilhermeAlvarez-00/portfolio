@@ -1,14 +1,15 @@
 import Link from 'next/link'
+import { Button } from '../../Button'
 
-import { Title } from "../../Title";
-import { ProjectItem } from "./projectItem";
+import { Title } from '../../Title'
+import { ProjectItem } from './projectItem'
 
-import { Container, MyProjectsContainer } from "./styles";
+import { Container, MyProjectsContainer } from './styles'
 
 interface Projects {
-  slug: string;
+  slug: string
   title: string
-  url: string;
+  url: string
 }
 
 interface MyProjectsProps {
@@ -22,21 +23,20 @@ export function MyProjects({ projects }: MyProjectsProps) {
         <Title text="Projetos" />
 
         <div>
-          {projects && projects.slice(0, 3).map(project => (
-            <ProjectItem
-              key={project.slug}
-              title={project.title}
-              type="Website"
-              slug={project.slug}
-              imgUrl={project.url}
-            />
-          ))}
+          {projects &&
+            projects
+              .slice(0, 3)
+              .map((project) => (
+                <ProjectItem
+                  key={project.slug}
+                  title={project.title}
+                  type="Website"
+                  slug={project.slug}
+                  imgUrl={project.url}
+                />
+              ))}
         </div>
-        <button>
-          <Link href="/projetos">
-            <a>Ver todos os projetos</a>
-          </Link>
-        </button>
+        <Button>Ver projetos</Button>
       </Container>
     </MyProjectsContainer>
   )

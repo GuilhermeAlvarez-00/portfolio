@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const HomeHeroContainer = styled.section`
   width: 100%;
-  padding: 9rem 2rem;
+  padding: 6rem 2rem;
   overflow-x: hidden;
 
   @media (max-width: 750px) {
@@ -41,18 +41,17 @@ export const TextContent = styled.div`
 
   h1 {
     span {
-      font-size: 5rem;
       font-weight: 700;
       color: ${({ theme }) => theme.pink500};
     }
-    
+
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 2.625rem;
   }
 
   p {
-    margin-top: 1rem;
-    font-size: 1.5rem;
+    margin: 2rem 0;
+    font-size: 1.375rem;
 
     span {
       color: ${({ theme }) => theme.pink500};
@@ -63,14 +62,65 @@ export const TextContent = styled.div`
     align-items: center;
     text-align: center;
   }
+`
 
-  @media (max-width: 550px) {
-    h1 {
-      span {
-        font-size: 4rem;
-      }
+export const ImageContent = styled.div`
+  display: flex;
+  position: relative;
 
-      font-size: 2rem;
+  span {
+    color: #dddddd;
+    margin-left: -3rem;
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 750px) {
+    align-items: center;
+    justify-content: center;
+
+    span {
+      margin: 0;
     }
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column-reverse;
+
+    img {
+      margin-top: -0.0625rem;
+    }
+  }
+`
+
+export const SocialMedias = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 4rem;
+
+  p {
+    font-size: 1.125rem;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+`
+
+export const MediaCircle = styled.div`
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: #313745;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
   }
 `

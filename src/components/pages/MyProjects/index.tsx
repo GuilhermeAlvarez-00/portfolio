@@ -36,7 +36,7 @@ export function MyProjects({ projects }: MyProjectsProps) {
                 />
               ))}
         </div>
-        <Button>Ver projetos</Button>
+        <Button path="projetos">Ver projetos</Button>
       </Container>
     </MyProjectsContainer>
   )

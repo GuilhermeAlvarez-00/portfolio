@@ -31,19 +31,21 @@ export function HomeHero() {
             <p>Minhas redes</p>
             <div>
               <MediaCircle>
-                <Link href="#">
-                  <a>
-                    <AiOutlineLinkedin />
-                  </a>
-                </Link>
+                <a
+                  href="https://www.linkedin.com/in/guilherme-alvarez-barboza/"
+                  target="_blank"
+                >
+                  <AiOutlineLinkedin />
+                </a>
               </MediaCircle>
 
               <MediaCircle>
-                <Link href="#">
-                  <a>
-                    <AiOutlineGithub />
-                  </a>
-                </Link>
+                <a
+                  href="https://github.com/GuilhermeAlvarez-00"
+                  target="_blank"
+                >
+                  <AiOutlineGithub />
+                </a>
               </MediaCircle>
             </div>
           </SocialMedias>

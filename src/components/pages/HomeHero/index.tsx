@@ -13,6 +13,10 @@ import {
 } from './styles'
 
 export function HomeHero() {
+  function redirectToLink(url: string) {
+    window.open(url)
+  }
+
   return (
     <HomeHeroContainer>
       <Container>
@@ -32,8 +36,11 @@ export function HomeHero() {
             <div>
               <MediaCircle>
                 <a
-                  href="https://www.linkedin.com/in/guilherme-alvarez-barboza/"
-                  target="_blank"
+                  onClick={() =>
+                    redirectToLink(
+                      'https://www.linkedin.com/in/guilherme-alvarez-barboza/'
+                    )
+                  }
                 >
                   <AiOutlineLinkedin />
                 </a>
@@ -41,8 +48,9 @@ export function HomeHero() {
 
               <MediaCircle>
                 <a
-                  href="https://github.com/GuilhermeAlvarez-00"
-                  target="_blank"
+                  onClick={() =>
+                    redirectToLink('https://github.com/GuilhermeAlvarez-00')
+                  }
                 >
                   <AiOutlineGithub />
                 </a>

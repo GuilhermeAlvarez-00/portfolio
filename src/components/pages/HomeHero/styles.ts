@@ -117,6 +117,7 @@ export const MediaCircle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
   a {
     font-size: 1.75rem;

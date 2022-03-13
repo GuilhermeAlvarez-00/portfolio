@@ -1,59 +1,49 @@
-import styled, { css } from "styled-components";
-
-interface NavLinkContainerProps {
-  isActive: boolean;
-}
+import styled from 'styled-components'
 
 export const Container = styled.header`
   width: 100%;
-  height: 4rem;
+  height: 4.75rem;
+  background: ${({ theme }) => theme.black800};
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+`
+export const Navbar = styled.nav`
+  width: min(61.75rem, 100%);
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid ${({ theme }) => theme.gray700};
+  justify-content: flex-end;
 
-  nav {
-    max-width: 1120px;
-    height: 4rem;
+  ul {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 1.125rem;
 
-    ul {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-    }
-  }
-`
-
-export const NavLinkContainer = styled.li<NavLinkContainerProps>`
-  a {
-      font-size: 1.2rem;
-      font-weight: 400;
-      color: ${props => props.isActive ? props.theme.white : props.theme.gray600};
-      position: relative;
-      line-height: 4rem;
+    li a {
       display: block;
+      font-size: 1.125rem;
+      line-height: 4.75rem;
+      position: relative;
+      color: ${({ theme }) => theme.white200};
       transition: color 0.2s;
 
       &:hover {
         color: ${({ theme }) => theme.white};
       }
 
-      ${props => props.isActive ? css`
-        font-weight: 500;
-        
-        &:after {
-          content: '';
-          position: absolute;
-          left: 0;
-          bottom: 1px;
-          width: 100%;
-          height: 2px;
-          background: ${({ theme }) => theme.pink500};
-        }
-      ` : null}
+      &.active {
+        font-weight: 700;
+        color: ${({ theme }) => theme.white};
+      }
+
+      &.active::after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        bottom: 1px;
+        background: ${({ theme }) => theme.pink500};
+        border-radius: 5px 5px 0 0;
+      }
     }
+  }
 `

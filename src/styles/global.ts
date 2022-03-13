@@ -18,7 +18,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     ::-webkit-scrollbar-track{
-      background: ${({ theme }) => darken(0.09, theme.blue900)};
+      background: ${({ theme }) => darken(0.09, theme.black900)};
     }
   }
 
@@ -36,13 +36,25 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     color: ${({ theme }) => theme.white};
-    background: ${({ theme }) => theme.gray800};
+    background: ${({ theme }) => theme.black800};
   }
 
   body, input, textarea, select, button {
-    font: 300 1rem 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     position: relative;
     overflow-x: hidden;
+  }
+
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
   }
 
   img {

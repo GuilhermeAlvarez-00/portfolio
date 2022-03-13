@@ -1,15 +1,25 @@
-import { NavLink } from './navLink'
-import { Container } from './styles'
+import Link from 'next/link'
+
+import { Container, Navbar } from './styles'
 
 export function Header() {
   return (
     <Container>
-      <nav>
+      <Navbar>
         <ul>
-          <NavLink text="Início" path="/" />
-          <NavLink text="Projetos" path="/projetos" includes />
+          <li>
+            <Link href="/">
+              <a className="active">Início</a>
+            </Link>
+          </li>
+
+          <li>
+            <Link href="/projetos">
+              <a>Projetos</a>
+            </Link>
+          </li>
         </ul>
-      </nav>
+      </Navbar>
     </Container>
   )
 }

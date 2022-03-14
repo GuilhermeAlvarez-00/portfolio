@@ -1,8 +1,11 @@
+import { HomeHero } from '../components/sections/Home'
+
+import { Container } from '../styles/commonStyles'
+
 export default function Home() {
   return (
-    <>
-      <h1>Hello world</h1>
-      <p>Test</p>
-    </>
+    <Container>
+      <HomeHero />
+    </Container>
   )
 }

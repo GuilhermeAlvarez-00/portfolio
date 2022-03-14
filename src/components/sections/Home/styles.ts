@@ -9,9 +9,15 @@ export const ContainerHome = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const ContentText = styled.div`
+  position: relative;
+
   h1 {
     span {
       color: ${({ theme }) => theme.pink500};
@@ -21,6 +27,18 @@ export const ContentText = styled.div`
   & > p {
     font-size: 1.25rem;
     margin-top: 1.125rem;
+  }
+
+  @media (max-width: 768px) {
+    text-align: center;
+
+    h1 {
+      font-size: 2.375rem;
+    }
+
+    p {
+      font-size: 1.125rem;
+    }
   }
 `
 
@@ -44,6 +62,29 @@ export const SocialNetworks = styled.div`
       line-height: 0;
     }
   }
+
+  @media (max-width: 768px) {
+    & > p {
+      display: none;
+    }
+
+    div {
+      position: absolute;
+      top: 4rem;
+      right: 0;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 320px) {
+    justify-content: center;
+    margin: 2rem 0;
+
+    div {
+      position: inherit;
+      flex-direction: row;
+    }
+  }
 `
 
 export const ContentImage = styled.div`
@@ -53,5 +94,14 @@ export const ContentImage = styled.div`
   img {
     width: 100%;
     max-width: 23.75rem;
+  }
+
+  @media (max-width: 768px) {
+    justify-content: center;
+
+    img {
+      width: 100%;
+      max-width: 20rem;
+    }
   }
 `

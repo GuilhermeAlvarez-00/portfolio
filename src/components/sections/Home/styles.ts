@@ -76,7 +76,7 @@ export const SocialNetworks = styled.div`
     }
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 368px) {
     justify-content: center;
     margin: 2rem 0;
 

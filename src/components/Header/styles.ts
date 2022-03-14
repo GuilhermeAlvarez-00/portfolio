@@ -46,4 +46,8 @@ export const Navbar = styled.nav`
       }
     }
   }
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `

@@ -1,12 +1,10 @@
 import styled from 'styled-components'
 
-export const SectionHome = styled.section`
-  width: 100%;
-  padding: 10rem 0;
-`
+import { Section, Container } from '../../../styles/commonStyles'
 
-export const ContainerHome = styled.div`
-  width: 100%;
+export const SectionHome = styled(Section)``
+
+export const ContainerHome = styled(Container)`
   display: grid;
   grid-template-columns: 1fr 1fr;
 

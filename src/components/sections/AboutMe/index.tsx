@@ -1,3 +1,4 @@
+import { RichText } from 'prismic-dom'
 import {
   SectionAbout,
   ContainerAbout,
@@ -5,7 +6,16 @@ import {
   ContentText,
 } from './styles'
 
-export function AboutMe() {
+interface AboutMeProps {
+  about: {
+    id: number
+    content: {
+      text: string
+    }[]
+  }
+}
+
+export function AboutMe({ about }: AboutMeProps) {
   return (
     <SectionAbout>
       <ContainerAbout>
@@ -19,24 +29,9 @@ export function AboutMe() {
           <h2>
             Sobre <span>mim</span>
           </h2>
-          <div>
-            <p>
-              Me chamo Guilherme Alvarez Barboza, moro em São Paulo e estou me
-              especializando em <strong>Desenvolvimento Web</strong>.
-            </p>
-
-            <p>
-              Fiz um curso de Desenvolvimento Full Stack na{' '}
-              <strong>Recode Pro</strong> 2020 - 2021, e alguns outros pela
-              udemy, atualmente faço o treinamento Ignite da{' '}
-              <strong>Rocketseat</strong>.
-            </p>
-
-            <p>
-              “Na vida não importa o que você esteja fazendo, faça sempre o seu
-              melhor.” - Ayrton Senna
-            </p>
-          </div>
+          <div
+            dangerouslySetInnerHTML={{ __html: RichText.asHtml(about.content) }}
+          />
         </ContentText>
       </ContainerAbout>
     </SectionAbout>

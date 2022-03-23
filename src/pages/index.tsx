@@ -2,6 +2,7 @@ import { GetStaticProps } from 'next'
 
 import { AboutMe } from '../components/sections/AboutMe'
 import { HomeHero } from '../components/sections/Home'
+import { Projects } from '../components/sections/Projects'
 import { getPrismicClient } from '../services/prismic'
 
 interface HomeProps {
@@ -18,6 +19,7 @@ export default function Home({ about }: HomeProps) {
     <main>
       <HomeHero />
       <AboutMe about={about} />
+      <Projects />
     </main>
   )
 }

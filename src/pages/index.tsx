@@ -5,6 +5,7 @@ import { AboutMe } from '../components/sections/AboutMe'
 import { HomeHero } from '../components/sections/Home'
 import { Projects } from '../components/sections/Projects'
 import { getPrismicClient } from '../services/prismic'
+import { Knowledges } from '../components/sections/Knowledges'
 
 interface HomeProps {
   about: {
@@ -28,6 +29,7 @@ export default function Home({ about, projects }: HomeProps) {
       <HomeHero />
       <AboutMe about={about} />
       <Projects projects={projects} />
+      <Knowledges />
     </main>
   )
 }

@@ -2,7 +2,19 @@ import { Button } from '../../Button'
 import { ProjectItem } from '../../ProjectItem'
 import { SectionProjects, ContainerProjects, ProjectsBox } from './styles'
 
-export function Projects() {
+interface Project {
+  uid: string
+  title: string
+  thumbnail: {
+    url: string
+  }
+}
+
+interface ProjectsProps {
+  projects: Project[]
+}
+
+export function Projects({ projects }: ProjectsProps) {
   return (
     <SectionProjects>
       <ContainerProjects>
@@ -12,10 +24,14 @@ export function Projects() {
         </p>
 
         <ProjectsBox>
-          <ProjectItem />
-          <ProjectItem />
-          <ProjectItem />
-          <ProjectItem />
+          {projects.map((project) => (
+            <ProjectItem
+              key={project.uid}
+              uid={project.uid}
+              title={project.title}
+              thumbnail={project.thumbnail.url}
+            />
+          ))}
         </ProjectsBox>
 
         <Button text="Ver projetos" />

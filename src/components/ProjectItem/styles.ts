@@ -15,6 +15,10 @@ export const Container = styled.div`
   img {
     width: 100%;
   }
+
+  @media (max-width: 648px) {
+    max-width: 100%;
+  }
 `
 
 export const Text = styled.div`

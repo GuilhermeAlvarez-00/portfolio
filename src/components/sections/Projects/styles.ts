@@ -28,4 +28,8 @@ export const ProjectsBox = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.375rem;
+
+  @media (max-width: 648px) {
+    grid-template-columns: 1fr;
+  }
 `

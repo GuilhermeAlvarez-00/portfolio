@@ -2,23 +2,21 @@ import Link from 'next/link'
 
 import { Container, Text } from './styles'
 
-export function ProjectItem() {
+interface ProjectItemProps {
+  uid: string
+  title: string
+  thumbnail: string
+}
+
+export function ProjectItem({ uid, title, thumbnail }: ProjectItemProps) {
   return (
-    <Link href="/projetos">
+    <Link href={`/projetos/${uid}`}>
       <Container>
-        <img
-          src="https://cdn.dribbble.com/users/2253180/screenshots/16465396/media/1c5a46dedd6773ed61437d01437d5b8d.jpg?compress=1&resize=1200x900&vertical=top"
-          alt="image"
-        />
+        <img src={thumbnail} alt="image" />
         <Text>
-          <h2>OriginSix</h2>
+          <h2>{title}</h2>
         </Text>
       </Container>
     </Link>
   )
 }
-
-/*       <img
-        src="https://cdn.dribbble.com/users/2253180/screenshots/16465396/media/1c5a46dedd6773ed61437d01437d5b8d.jpg?compress=1&resize=1200x900&vertical=top"
-        alt="image"
-      /> */

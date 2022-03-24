@@ -17,6 +17,7 @@ export const ContainerContact = styled(Container)`
 
 export const ContentText = styled.div`
   & > p {
+    color: ${({ theme }) => theme.white200};
     font-size: 1.25rem;
     margin-top: 1.125rem;
   }

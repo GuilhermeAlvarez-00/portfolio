@@ -50,6 +50,7 @@ export const ContentText = styled.div`
     }
 
     p {
+      color: ${({ theme }) => theme.white200};
       font-size: 1.25rem;
       strong {
         color: ${({ theme }) => theme.pink500};

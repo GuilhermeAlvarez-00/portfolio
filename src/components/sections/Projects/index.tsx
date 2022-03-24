@@ -1,3 +1,4 @@
+import { Button } from '../../Button'
 import { ProjectItem } from '../../ProjectItem'
 import { SectionProjects, ContainerProjects, ProjectsBox } from './styles'
 
@@ -16,6 +17,8 @@ export function Projects() {
           <ProjectItem />
           <ProjectItem />
         </ProjectsBox>
+
+        <Button text="Ver projetos" />
       </ContainerProjects>
     </SectionProjects>
   )

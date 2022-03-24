@@ -7,6 +7,7 @@ interface ContainerProps {
 export const Container = styled.div`
   width: 100%;
   max-width: 25rem;
+  height: 15.625rem;
   position: relative;
   border-radius: 0.625rem;
   overflow: hidden;

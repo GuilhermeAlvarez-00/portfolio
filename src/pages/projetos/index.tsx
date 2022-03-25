@@ -16,7 +16,7 @@ interface AllProjectsProps {
   }[]
 }
 
-export default function AllProjects({ projects }) {
+export default function AllProjects({ projects }: AllProjectsProps) {
   return (
     <Container>
       <SectionAllProjects>

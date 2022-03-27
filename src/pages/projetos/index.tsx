@@ -4,7 +4,11 @@ import Prismic from '@prismicio/client'
 import { ProjectItem } from '../../components/ProjectItem'
 import { getPrismicClient } from '../../services/prismic'
 
-import { Container, SectionAllProjects, ContainerAllProjects } from './styles'
+import {
+  Container,
+  SectionAllProjects,
+  ContainerAllProjects,
+} from '../../styles/projectStyles'
 
 interface AllProjectsProps {
   projects: {

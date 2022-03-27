@@ -1,11 +1,17 @@
 import styled from 'styled-components'
 
-export const Container = styled.button`
+interface ContainerProps {
+  outline?: boolean
+}
+
+export const Container = styled.button<ContainerProps>`
   width: 8.625rem;
   height: 2.375rem;
   border-radius: 0.31rem;
-  border: 0;
-  background: ${({ theme }) => theme.pink500};
+  border: ${({ theme, outline }) =>
+    outline ? `2px solid ${theme.pink500}` : 0};
+  background: ${({ theme, outline }) =>
+    outline ? 'transparent' : theme.pink500};
   margin-top: 1.125rem;
 
   a {

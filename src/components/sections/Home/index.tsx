@@ -24,7 +24,7 @@ export function HomeHero() {
             web.
           </p>
 
-          <Button text="Projetos" />
+          <Button path="/projetos" text="Projetos" />
 
           <SocialNetworks>
             <p>Minhas redes</p>

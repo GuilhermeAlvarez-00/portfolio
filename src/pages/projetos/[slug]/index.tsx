@@ -2,9 +2,14 @@ import { GetStaticProps, GetStaticPaths } from 'next'
 import Prismic from '@prismicio/client'
 
 import { getPrismicClient } from '../../../services/prismic'
+import { ProjectDescription } from '../../../components/sections/ProjectDescription'
 
 export default function IndividualProject() {
-  return <h2>Projeto individual</h2>
+  return (
+    <main>
+      <ProjectDescription />
+    </main>
+  )
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {

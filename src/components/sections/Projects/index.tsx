@@ -34,7 +34,7 @@ export function Projects({ projects }: ProjectsProps) {
           ))}
         </ProjectsBox>
 
-        <Button text="Ver projetos" />
+        <Button path="/projetos" text="Ver projetos" />
       </ContainerProjects>
     </SectionProjects>
   )

@@ -1,9 +1,6 @@
 import styled from 'styled-components'
 
-import {
-  Section,
-  Container as GlobalContainer,
-} from '../../styles/commonStyles'
+import { Section, Container as GlobalContainer } from './commonStyles'
 
 export const Container = styled.main``
 

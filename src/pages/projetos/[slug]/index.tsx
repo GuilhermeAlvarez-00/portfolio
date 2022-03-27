@@ -38,8 +38,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   const response = await prismic.getByUID('projeto', String(slug), {})
 
-  console.log(response)
-
   return {
     props: {},
     revalidate: 60 * 30, // 30 minutes

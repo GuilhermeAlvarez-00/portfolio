@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next'
+import Head from 'next/head'
 import Prismic from '@prismicio/client'
 
 import { AboutMe } from '../components/sections/AboutMe'
@@ -26,13 +27,30 @@ interface HomeProps {
 
 export default function Home({ about, projects }: HomeProps) {
   return (
-    <main>
-      <HomeHero />
-      <AboutMe about={about} />
-      <Projects projects={projects} />
-      <Knowledges />
-      <Contact />
-    </main>
+    <>
+      <Head>
+        <title>Início - Dev Guilherme</title>
+        <meta
+          name="description"
+          content="Sou desenvolvedor front-end e esse é meu portfólio onde voçê pode conhecer mais de mim, ver os projetos que ja desenvolvi e caso tenha interesse em meus serviços é só deixar uma mensagem no formulário abaixo"
+        />
+        <meta property="og:image" content="/ogimage.png" />
+        <meta property="og:image:secure_url" content="/ogimage.png" />
+        <meta name="twitter:image" content="/ogimage.png" />
+        <meta name="twitter:image:src" content="/ogimage.png" />
+        <meta
+          property="og:description"
+          content="Sou desenvolvedor front-end e esse é meu portfólio onde voçê pode conhecer mais de mim, ver os projetos que ja desenvolvi e caso tenha interesse em meus serviços é só deixar uma mensagem no formulário abaixo"
+        />
+      </Head>
+      <main>
+        <HomeHero />
+        <AboutMe about={about} />
+        <Projects projects={projects} />
+        <Knowledges />
+        <Contact />
+      </main>
+    </>
   )
 }
 

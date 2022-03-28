@@ -1,4 +1,5 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
+import Head from 'next/head'
 import Prismic from '@prismicio/client'
 
 import { getPrismicClient } from '../../../services/prismic'
@@ -26,19 +27,31 @@ interface IndividualProjectProps {
 
 export default function IndividualProject({ project }: IndividualProjectProps) {
   return (
-    <main>
-      <ProjectDescription
-        project={{
-          thumbnail: project.thumbnail,
-          title: project.title,
-          description: project.description,
-          repository: project.repository,
-          online_project: project.online_project,
-        }}
-      />
-      <Technologies technologies={project.technologies} />
-      <Gallery photos={project.photos} />
-    </main>
+    <>
+      <Head>
+        <title>{project.title} - Dev Guilherme</title>
+        <meta name="description" content={project.description} />
+        <meta property="og:image" content={project.thumbnail} />
+        <meta property="og:image:secure_url" content={project.thumbnail} />
+        <meta name="twitter:image" content={project.thumbnail} />
+        <meta name="twitter:image:src" content={project.thumbnail} />
+        <meta property="og:description" content={project.description} />
+      </Head>
+
+      <main>
+        <ProjectDescription
+          project={{
+            thumbnail: project.thumbnail,
+            title: project.title,
+            description: project.description,
+            repository: project.repository,
+            online_project: project.online_project,
+          }}
+        />
+        <Technologies technologies={project.technologies} />
+        <Gallery photos={project.photos} />
+      </main>
+    </>
   )
 }
 

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { NavLink } from './navLink'
 
 import { Container, Navbar } from './styles'
 
@@ -8,15 +9,11 @@ export function Header() {
       <Navbar>
         <ul>
           <li>
-            <Link href="/">
-              <a className="active">Início</a>
-            </Link>
+            <NavLink path="/" text="Início" />
           </li>
 
           <li>
-            <Link href="/projetos">
-              <a>Projetos</a>
-            </Link>
+            <NavLink path="/projetos" text="Projetos" includes />
           </li>
         </ul>
       </Navbar>

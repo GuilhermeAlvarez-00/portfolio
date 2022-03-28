@@ -1,15 +1,23 @@
-import { SectionTechnologies, ContainerTechnologies, List } from './styles'
+import { RichText } from 'prismic-dom'
 
-export function Technologies() {
+import { SectionTechnologies, ContainerTechnologies } from './styles'
+
+interface TechnologiesProps {
+  technologies: []
+}
+
+export function Technologies({ technologies }: TechnologiesProps) {
   return (
     <SectionTechnologies>
       <ContainerTechnologies>
         <h2>Tecnologias</h2>
-        <List>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-        </List>
+        {
+          <div
+            dangerouslySetInnerHTML={{
+              __html: RichText.asHtml(technologies),
+            }}
+          />
+        }
       </ContainerTechnologies>
     </SectionTechnologies>
   )

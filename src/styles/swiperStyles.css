@@ -11,6 +11,7 @@ div.swiper-wrapper div.swiper-slide {
 }
 
 div.swiper-wrapper div.swiper-slide img {
-  width: min(36.375rem, 100%);
+  width: min(48.875rem, 100%);
+  min-height: 30rem;
   border-radius: 0.3125rem;
 }

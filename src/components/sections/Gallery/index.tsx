@@ -28,7 +28,7 @@ export function Gallery({ photos }: GalleryProps) {
           className="mySwiper"
         >
           {photos.map((photo) => (
-            <SwiperSlide key={photo.image.image_description}>
+            <SwiperSlide key={photo.image.url}>
               <img src={photo.image.url} alt={photo.image.image_description} />
             </SwiperSlide>
           ))}

@@ -45,6 +45,10 @@ export const GlobalStyles = createGlobalStyle`
     overflow-x: hidden;
   }
 
+  main {
+    overflow-x: hidden;
+  }
+
   h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;

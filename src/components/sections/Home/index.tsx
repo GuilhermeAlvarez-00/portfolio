@@ -14,7 +14,7 @@ export function HomeHero() {
   return (
     <SectionHome>
       <ContainerHome>
-        <ContentText>
+        <ContentText data-aos="fade-right">
           <h1>
             <span>Dev</span> <br /> Guilherme 👋
           </h1>
@@ -46,6 +46,7 @@ export function HomeHero() {
 
         <ContentImage>
           <img
+            data-aos="fade-left"
             src="/developer.svg"
             alt="Imagem de uma pessoa codificando em um notebook"
           />

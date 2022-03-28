@@ -21,11 +21,12 @@ export function AboutMe({ about }: AboutMeProps) {
       <ContainerAbout>
         <ContentImage>
           <img
+            data-aos="fade-right"
             src="/aboutme.svg"
             alt="Uma pessoa em pé olhando sua página de perfil ao lado"
           />
         </ContentImage>
-        <ContentText>
+        <ContentText data-aos="fade-left">
           <h2>
             Sobre <span>mim</span>
           </h2>

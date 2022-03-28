@@ -23,7 +23,7 @@ export function Projects({ projects }: ProjectsProps) {
           Confira alguns dos meus <span>projetos</span> abaixo.
         </p>
 
-        <ProjectsBox>
+        <ProjectsBox data-aos="fade-up">
           {projects.map((project) => (
             <ProjectItem
               key={project.uid}

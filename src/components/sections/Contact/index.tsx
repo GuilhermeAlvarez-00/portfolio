@@ -10,7 +10,7 @@ export function Contact() {
   return (
     <SectionContact>
       <ContainerContact>
-        <ContentText>
+        <ContentText data-aos="fade-right">
           <h2>
             Precisando dos meus <br /> serviços?
           </h2>
@@ -27,6 +27,7 @@ export function Contact() {
 
         <ContentImage>
           <img
+            data-aos="fade-left"
             src="/contact.svg"
             alt="Imagem de uma pessoa codificando em um notebook"
           />

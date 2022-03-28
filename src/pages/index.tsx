@@ -1,6 +1,9 @@
+import { useEffect } from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Prismic from '@prismicio/client'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 import { AboutMe } from '../components/sections/AboutMe'
 import { HomeHero } from '../components/sections/Home'
@@ -26,6 +29,9 @@ interface HomeProps {
 }
 
 export default function Home({ about, projects }: HomeProps) {
+  useEffect(() => {
+    Aos.init({ duration: 1000 })
+  }, [])
   return (
     <>
       <Head>

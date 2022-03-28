@@ -17,10 +17,6 @@ interface ProjectDescriptionProps {
 }
 
 export function ProjectDescription({ project }: ProjectDescriptionProps) {
-  function handleRedirect(url: string) {
-    window.open(url)
-  }
-
   return (
     <SectionProjectDescription>
       <ContainerProjectDescription>
@@ -36,13 +32,15 @@ export function ProjectDescription({ project }: ProjectDescriptionProps) {
 
             <div>
               <Button
+                path={project.online_project}
                 text="Projeto online"
-                onClick={() => handleRedirect(project.online_project)}
+                otherWindow
               />
               <Button
+                path={project.repository}
                 outline
                 text="Repositório"
-                onClick={() => handleRedirect(project.repository)}
+                otherWindow
               />
             </div>
           </TextContent>

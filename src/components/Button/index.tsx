@@ -7,18 +7,20 @@ interface ButtonProps {
   outline?: boolean
   path?: string
   onClick?: () => void
+  otherWindow?: boolean
 }
 
 export function Button({
   text,
   path = '#',
   outline = false,
+  otherWindow = false,
   onClick,
 }: ButtonProps) {
   return (
     <Container outline={outline} onClick={onClick}>
       <Link href={path}>
-        <a>{text}</a>
+        <a target={otherWindow ? '_blank' : '_self'}>{text}</a>
       </Link>
     </Container>
   )

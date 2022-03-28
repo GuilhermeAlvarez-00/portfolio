@@ -38,4 +38,11 @@ export const TextContent = styled.div`
     display: flex;
     gap: 1.25rem;
   }
+
+  @media (max-width: 400px) {
+    div {
+      flex-direction: column;
+      gap: 0rem;
+    }
+  }
 `

@@ -7,6 +7,8 @@ import { GlobalStyles } from '../styles/global'
 
 import { theme } from '../styles/theme'
 
+import '../styles/swiperStyles.css'
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>

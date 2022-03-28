@@ -4,12 +4,14 @@ import Prismic from '@prismicio/client'
 import { getPrismicClient } from '../../../services/prismic'
 import { ProjectDescription } from '../../../components/sections/ProjectDescription'
 import { Technologies } from '../../../components/sections/Technologies'
+import { Gallery } from '../../../components/sections/Gallery'
 
 export default function IndividualProject() {
   return (
     <main>
       <ProjectDescription />
       <Technologies />
+      <Gallery />
     </main>
   )
 }

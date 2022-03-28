@@ -1,0 +1,16 @@
+div.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #ff2359;
+}
+
+/* min(36.375rem, 100%) */
+
+div.swiper-wrapper div.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.swiper-wrapper div.swiper-slide img {
+  width: min(36.375rem, 100%);
+  border-radius: 0.3125rem;
+}

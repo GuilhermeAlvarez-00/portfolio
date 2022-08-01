@@ -15,4 +15,5 @@
   <li>Styled-Components</li>
   <li>PrismicCMS</li>
   <li>AOS</li>
+  <li>Swiper</li>
  </ul>

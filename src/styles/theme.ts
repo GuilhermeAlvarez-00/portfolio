@@ -4,6 +4,6 @@ export const theme = {
   white: "#FFFFFF",
   white200: "#E2E2E2",
   white300: "#B8B8B8",
-  pink500: "#ff0040",
+  pink500: "#e9003a",
 };
 

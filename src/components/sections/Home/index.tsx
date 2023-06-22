@@ -35,7 +35,6 @@ export function HomeHero() {
                 <a
                   target="_blank"
                   aria-label="Linkedin"
-                  aria-hidden="true"
                   rel="noopener noreferrer"
                 >
                   <FaLinkedin />
@@ -46,7 +45,6 @@ export function HomeHero() {
                 <a
                   target="_blank"
                   aria-label="Github"
-                  aria-hidden="true"
                   rel="noopener noreferrer"
                 >
                   <FaGithub />

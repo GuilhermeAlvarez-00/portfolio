@@ -32,13 +32,13 @@ export function HomeHero() {
             <p>Minhas redes</p>
             <div>
               <Link href="https://www.linkedin.com/in/guilherme-alvarez-barboza/">
-                <a target="_blank">
+                <a target="_blank" aria-label="Linkedin" aria-hidden="true">
                   <FaLinkedin />
                 </a>
               </Link>
 
               <Link href="https://github.com/GuilhermeAlvarez-00">
-                <a target="_blank">
+                <a target="_blank" aria-label="Github" aria-hidden="true">
                   <FaGithub />
                 </a>
               </Link>

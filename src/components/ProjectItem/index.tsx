@@ -10,8 +10,6 @@ interface ProjectItemProps {
 }
 
 export function ProjectItem({ uid, title, thumbnail }: ProjectItemProps) {
-  console.log(thumbnail);
-
   return (
     <Link href={`/projetos/${uid}`} passHref>
       <Container>

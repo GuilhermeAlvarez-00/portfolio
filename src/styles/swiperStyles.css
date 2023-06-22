@@ -1,5 +1,5 @@
 div.swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #ff2359;
+  background-color: #ff0040;
 }
 
 /* min(36.375rem, 100%) */
@@ -43,3 +43,4 @@ div.swiper-wrapper div.swiper-slide img {
     height: auto;
   }
 }
+

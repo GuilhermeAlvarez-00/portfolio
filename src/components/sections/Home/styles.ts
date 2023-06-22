@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import { Section, Container } from '../../../styles/commonStyles'
+import { Section, Container } from "../../../styles/commonStyles";
 
-export const SectionHome = styled(Section)``
+export const SectionHome = styled(Section)``;
 
 export const ContainerHome = styled(Container)`
   overflow-x: hidden;
@@ -12,7 +12,7 @@ export const ContainerHome = styled(Container)`
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
-`
+`;
 
 export const ContentText = styled.div`
   position: relative;
@@ -39,7 +39,7 @@ export const ContentText = styled.div`
       font-size: 1.125rem;
     }
   }
-`
+`;
 
 export const SocialNetworks = styled.div`
   margin-top: 6rem;
@@ -84,23 +84,25 @@ export const SocialNetworks = styled.div`
       flex-direction: row;
     }
   }
-`
+`;
 
 export const ContentImage = styled.div`
   display: flex;
   justify-content: flex-end;
 
-  img {
-    width: 100%;
-    max-width: 23.75rem;
-  }
-
   @media (max-width: 768px) {
     justify-content: center;
-
-    img {
-      width: 100%;
-      max-width: 20rem;
-    }
   }
-`
+`;
+
+export const ImageWrapper = styled.div`
+  width: 100%;
+  max-width: 23.75rem;
+  position: relative;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 20rem;
+  }
+`;
+

@@ -1,6 +1,7 @@
-import Link from 'next/link'
-import { FaLinkedin, FaGithub } from 'react-icons/fa'
-import { Button } from '../../Button'
+import Link from "next/link";
+import Image from "next/image";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { Button } from "../../Button";
 
 import {
   SectionHome,
@@ -8,7 +9,8 @@ import {
   ContentText,
   SocialNetworks,
   ContentImage,
-} from './styles'
+  ImageWrapper,
+} from "./styles";
 
 export function HomeHero() {
   return (
@@ -45,13 +47,18 @@ export function HomeHero() {
         </ContentText>
 
         <ContentImage>
-          <img
-            data-aos="fade-left"
-            src="/developer.svg"
-            alt="Imagem de uma pessoa codificando em um notebook"
-          />
+          <ImageWrapper>
+            <Image
+              data-aos="fade-left"
+              src="/developer.svg"
+              alt="Imagem de uma pessoa codificando em um notebook"
+              layout="fill"
+              objectFit="contain"
+            />
+          </ImageWrapper>
         </ContentImage>
       </ContainerHome>
     </SectionHome>
-  )
+  );
 }
+

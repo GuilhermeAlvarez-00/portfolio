@@ -22,9 +22,8 @@ export function AboutMe({ about }: AboutMeProps) {
     <SectionAbout>
       <ContainerAbout>
         <ContentImage>
-          <ImageWrapper>
+          <ImageWrapper data-aos="fade-right">
             <Image
-              data-aos="fade-right"
               src="/aboutme.svg"
               alt="Uma pessoa em pé olhando sua página de perfil ao lado"
               layout="fill"

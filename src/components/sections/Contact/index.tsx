@@ -28,9 +28,8 @@ export function Contact() {
         </ContentText>
 
         <ContentImage>
-          <ImageWrapper>
+          <ImageWrapper data-aos="fade-left">
             <Image
-              data-aos="fade-left"
               src="/contact.svg"
               alt="Imagem de uma pessoa codificando em um notebook"
               layout="fill"

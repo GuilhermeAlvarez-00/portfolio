@@ -26,6 +26,10 @@ export const ImageWrapper = styled.div`
   max-width: 23.75rem;
   position: relative;
 
+  @media (max-width: 868px) {
+    height: 174px;
+  }
+
   @media (max-width: 768px) {
     width: 100%;
     max-width: 20rem;

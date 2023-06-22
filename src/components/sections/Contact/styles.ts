@@ -76,7 +76,7 @@ export const ImageWrapper = styled.div`
   position: relative;
 
   @media (max-width: 768px) {
-    width: 100%;
+    height: 160px;
     max-width: 18.125rem;
   }
 `;

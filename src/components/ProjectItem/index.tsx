@@ -14,7 +14,13 @@ export function ProjectItem({ uid, title, thumbnail }: ProjectItemProps) {
     <Link href={`/projetos/${uid}`} passHref>
       <Container>
         <ImageWrapper>
-          <Image src={thumbnail} alt="image" layout="fill" objectFit="cover" />
+          <Image
+            src={thumbnail}
+            alt="image"
+            layout="fill"
+            objectFit="cover"
+            loading="lazy"
+          />
         </ImageWrapper>
         <Text>
           <h2>{title}</h2>

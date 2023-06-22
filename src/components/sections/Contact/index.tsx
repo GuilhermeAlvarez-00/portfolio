@@ -34,7 +34,6 @@ export function Contact() {
               alt="Imagem de uma pessoa codificando em um notebook"
               layout="fill"
               objectFit="contain"
-              loading="lazy"
             />
           </ImageWrapper>
         </ContentImage>

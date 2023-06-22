@@ -28,7 +28,6 @@ export function AboutMe({ about }: AboutMeProps) {
               alt="Uma pessoa em pé olhando sua página de perfil ao lado"
               layout="fill"
               objectFit="contain"
-              loading="lazy"
             />
           </ImageWrapper>
         </ContentImage>

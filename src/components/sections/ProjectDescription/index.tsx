@@ -29,7 +29,6 @@ export function ProjectDescription({ project }: ProjectDescriptionProps) {
               alt={`Thumbnail do projeto ${project.title}`}
               layout="fill"
               objectFit="cover"
-              loading="lazy"
             />
           </ImageWrapper>
 

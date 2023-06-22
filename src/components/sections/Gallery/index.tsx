@@ -36,7 +36,6 @@ export function Gallery({ photos }: GalleryProps) {
                   alt={photo.image.image_description}
                   layout="fill"
                   objectFit="cover"
-                  loading="lazy"
                 />
               </ImageWrapper>
             </SwiperSlide>

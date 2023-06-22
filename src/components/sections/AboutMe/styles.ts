@@ -1,36 +1,36 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import { Section, Container } from '../../../styles/commonStyles'
+import { Section, Container } from "../../../styles/commonStyles";
 
 export const SectionAbout = styled(Section)`
   background: ${({ theme }) => theme.black900};
-`
+`;
 
 export const ContainerAbout = styled(Container)`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
 
   @media (max-width: 868px) {
     grid-template-columns: 1fr;
     justify-content: center;
   }
-`
+`;
 
 export const ContentImage = styled.div`
   display: flex;
   justify-content: center;
+`;
 
-  img {
-    width: min(26rem, 100%);
-  }
+export const ImageWrapper = styled.div`
+  width: 100%;
+  max-width: 23.75rem;
+  position: relative;
 
-  @media (max-width: 868px) {
-    img {
-      width: min(22rem, 100%);
-    }
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 20rem;
   }
-`
+`;
 
 export const ContentText = styled.div`
   h2 {
@@ -74,4 +74,5 @@ export const ContentText = styled.div`
     margin-top: 2rem;
     text-align: center;
   }
-`
+`;
+

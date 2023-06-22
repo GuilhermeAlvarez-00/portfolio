@@ -1,18 +1,19 @@
-import React, { useRef, useState } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination } from 'swiper'
+import React, { useRef, useState } from "react";
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper";
 
-import 'swiper/css'
-import 'swiper/css/pagination'
-import { SectionGallery, ContainerGallery } from './styles'
+import "swiper/css";
+import "swiper/css/pagination";
+import { SectionGallery, ContainerGallery, ImageWrapper } from "./styles";
 
 interface GalleryProps {
   photos: {
     image: {
-      url: string
-      image_description: string
-    }
-  }[]
+      url: string;
+      image_description: string;
+    };
+  }[];
 }
 
 export function Gallery({ photos }: GalleryProps) {
@@ -29,11 +30,19 @@ export function Gallery({ photos }: GalleryProps) {
         >
           {photos.map((photo) => (
             <SwiperSlide key={photo.image.url}>
-              <img src={photo.image.url} alt={photo.image.image_description} />
+              <ImageWrapper>
+                <Image
+                  src={photo.image.url}
+                  alt={photo.image.image_description}
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </ImageWrapper>
             </SwiperSlide>
           ))}
         </Swiper>
       </ContainerGallery>
     </SectionGallery>
-  )
+  );
 }
+

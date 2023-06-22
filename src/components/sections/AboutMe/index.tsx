@@ -1,18 +1,20 @@
-import { RichText } from 'prismic-dom'
+import { RichText } from "prismic-dom";
+import Image from "next/image";
 import {
   SectionAbout,
   ContainerAbout,
   ContentImage,
   ContentText,
-} from './styles'
+  ImageWrapper,
+} from "./styles";
 
 interface AboutMeProps {
   about: {
-    id: number
+    id: number;
     content: {
-      text: string
-    }[]
-  }
+      text: string;
+    }[];
+  };
 }
 
 export function AboutMe({ about }: AboutMeProps) {
@@ -20,12 +22,17 @@ export function AboutMe({ about }: AboutMeProps) {
     <SectionAbout>
       <ContainerAbout>
         <ContentImage>
-          <img
-            data-aos="fade-right"
-            src="/aboutme.svg"
-            alt="Uma pessoa em pé olhando sua página de perfil ao lado"
-          />
+          <ImageWrapper>
+            <Image
+              data-aos="fade-right"
+              src="/aboutme.svg"
+              alt="Uma pessoa em pé olhando sua página de perfil ao lado"
+              layout="fill"
+              objectFit="contain"
+            />
+          </ImageWrapper>
         </ContentImage>
+
         <ContentText data-aos="fade-left">
           <h2>
             Sobre <span>mim</span>
@@ -36,5 +43,6 @@ export function AboutMe({ about }: AboutMeProps) {
         </ContentText>
       </ContainerAbout>
     </SectionAbout>
-  )
+  );
 }
+

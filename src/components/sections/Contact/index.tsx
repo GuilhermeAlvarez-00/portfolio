@@ -3,8 +3,10 @@ import {
   ContainerContact,
   ContentText,
   ContentImage,
-} from './styles'
-import { AiOutlineMail } from 'react-icons/ai'
+  ImageWrapper,
+} from "./styles";
+import Image from "next/image";
+import { AiOutlineMail } from "react-icons/ai";
 
 export function Contact() {
   return (
@@ -26,13 +28,18 @@ export function Contact() {
         </ContentText>
 
         <ContentImage>
-          <img
-            data-aos="fade-left"
-            src="/contact.svg"
-            alt="Imagem de uma pessoa codificando em um notebook"
-          />
+          <ImageWrapper>
+            <Image
+              data-aos="fade-left"
+              src="/contact.svg"
+              alt="Imagem de uma pessoa codificando em um notebook"
+              layout="fill"
+              objectFit="contain"
+            />
+          </ImageWrapper>
         </ContentImage>
       </ContainerContact>
     </SectionContact>
-  )
+  );
 }
+

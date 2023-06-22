@@ -1,19 +1,18 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import { Section, Container } from '../../../styles/commonStyles'
+import { Section, Container } from "../../../styles/commonStyles";
 
-export const SectionContact = styled(Section)``
+export const SectionContact = styled(Section)``;
 
 export const ContainerContact = styled(Container)`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     justify-content: center;
   }
-`
+`;
 
 export const ContentText = styled.div`
   & > p {
@@ -54,16 +53,11 @@ export const ContentText = styled.div`
       justify-content: center;
     }
   }
-`
+`;
 
 export const ContentImage = styled.div`
   display: flex;
   justify-content: flex-end;
-
-  img {
-    width: 100%;
-    max-width: 20.5rem;
-  }
 
   @media (max-width: 768px) {
     justify-content: center;
@@ -74,4 +68,16 @@ export const ContentImage = styled.div`
       max-width: 18.125rem;
     }
   }
-`
+`;
+
+export const ImageWrapper = styled.div`
+  width: 100%;
+  max-width: 20.5rem;
+  position: relative;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 18.125rem;
+  }
+`;
+

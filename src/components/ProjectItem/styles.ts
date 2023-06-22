@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 interface ContainerProps {
-  background: string
+  background: string;
 }
 
 export const Container = styled.div`
@@ -20,7 +20,14 @@ export const Container = styled.div`
   @media (max-width: 648px) {
     max-width: 100%;
   }
-`
+`;
+
+export const ImageWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+`;
 
 export const Text = styled.div`
   width: 100%;
@@ -49,6 +56,5 @@ export const Text = styled.div`
       margin-top: 0;
     }
   }
-`
+`;
 
-/* ${({ background }) => `url(${background})`} */

@@ -1,19 +1,21 @@
-import { Button } from '../../Button'
+import Image from "next/image";
+import { Button } from "../../Button";
 import {
   SectionProjectDescription,
   ContainerProjectDescription,
   CardProjectDetails,
   TextContent,
-} from './styles'
+  ImageWrapper,
+} from "./styles";
 
 interface ProjectDescriptionProps {
   project: {
-    thumbnail: string
-    title: string
-    description: string
-    repository: string
-    online_project: string
-  }
+    thumbnail: string;
+    title: string;
+    description: string;
+    repository: string;
+    online_project: string;
+  };
 }
 
 export function ProjectDescription({ project }: ProjectDescriptionProps) {
@@ -21,10 +23,14 @@ export function ProjectDescription({ project }: ProjectDescriptionProps) {
     <SectionProjectDescription>
       <ContainerProjectDescription>
         <CardProjectDetails>
-          <img
-            src={project.thumbnail}
-            alt={`Thumbnail do projeto ${project.title}`}
-          />
+          <ImageWrapper>
+            <Image
+              src={project.thumbnail}
+              alt={`Thumbnail do projeto ${project.title}`}
+              layout="fill"
+              objectFit="cover"
+            />
+          </ImageWrapper>
 
           <TextContent>
             <h2>{project.title}</h2>
@@ -47,5 +53,6 @@ export function ProjectDescription({ project }: ProjectDescriptionProps) {
         </CardProjectDetails>
       </ContainerProjectDescription>
     </SectionProjectDescription>
-  )
+  );
 }
+

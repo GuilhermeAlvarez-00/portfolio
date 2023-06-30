@@ -20,11 +20,10 @@ export function Projects({ projects }: ProjectsProps) {
       <ContainerProjects>
         <h2>Projetos</h2>
         <p>
-          Confira alguns dos meus{" "}
-          <span>
+          Confira alguns dos meus projetos abaixo.
+          {/* <span>
             <strong>projetos</strong>
-          </span>{" "}
-          abaixo.
+          </span>{" "} */}
         </p>
 
         <ProjectsBox data-aos="fade-up">

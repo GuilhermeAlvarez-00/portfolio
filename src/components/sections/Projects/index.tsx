@@ -1,17 +1,17 @@
-import { Button } from '../../Button'
-import { ProjectItem } from '../../ProjectItem'
-import { SectionProjects, ContainerProjects, ProjectsBox } from './styles'
+import { Button } from "../../Button";
+import { ProjectItem } from "../../ProjectItem";
+import { SectionProjects, ContainerProjects, ProjectsBox } from "./styles";
 
 interface Project {
-  uid: string
-  title: string
+  uid: string;
+  title: string;
   thumbnail: {
-    url: string
-  }
+    url: string;
+  };
 }
 
 interface ProjectsProps {
-  projects: Project[]
+  projects: Project[];
 }
 
 export function Projects({ projects }: ProjectsProps) {
@@ -20,7 +20,11 @@ export function Projects({ projects }: ProjectsProps) {
       <ContainerProjects>
         <h2>Projetos</h2>
         <p>
-          Confira alguns dos meus <span>projetos</span> abaixo.
+          Confira alguns dos meus{" "}
+          <span>
+            <strong>projetos</strong>
+          </span>{" "}
+          abaixo.
         </p>
 
         <ProjectsBox data-aos="fade-up">
@@ -37,5 +41,6 @@ export function Projects({ projects }: ProjectsProps) {
         <Button path="/projetos" text="Ver projetos" />
       </ContainerProjects>
     </SectionProjects>
-  )
+  );
 }
+

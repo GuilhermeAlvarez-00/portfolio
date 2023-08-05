@@ -54,10 +54,9 @@ export function HomeHero() {
           </SocialNetworks>
         </ContentText>
 
-        <ContentImage>
+        <ContentImage data-aos="fade-left">
           <ImageWrapper>
             <Image
-              data-aos="fade-left"
               src="/developer.svg"
               alt="Imagem de uma pessoa codificando em um notebook"
               layout="fill"
@@ -69,4 +68,3 @@ export function HomeHero() {
     </SectionHome>
   );
 }
-

@@ -5,7 +5,7 @@ import { Section, Container } from "../../../styles/commonStyles";
 export const SectionHome = styled(Section)``;
 
 export const ContainerHome = styled(Container)`
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   display: grid;
   grid-template-columns: 1fr 1fr;
 
@@ -105,4 +105,3 @@ export const ImageWrapper = styled.div`
     max-width: 20rem;
   }
 `;
-

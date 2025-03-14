@@ -2,7 +2,17 @@ import styled from 'styled-components'
 
 export const Section = styled.section`
   width: 100%;
-  padding: 10rem 1rem;
+	min-height: 100dvh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 5rem 1rem;
+`
+
+export const SubSection = styled.section`
+	width: 100%;
+	padding: 10rem 1rem;
 `
 
 export const Container = styled.div`

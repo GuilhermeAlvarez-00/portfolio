@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-import { Section, Container } from "../../../styles/commonStyles";
+import { SubSection, Container } from "../../../styles/commonStyles";
 
-export const SectionProjectDescription = styled(Section)``;
+export const SectionProjectDescription = styled(SubSection)``;
 
 export const ContainerProjectDescription = styled(Container)``;
 

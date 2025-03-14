@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-import { Section, Container } from '../../../styles/commonStyles'
+import { SubSection, Container } from '../../../styles/commonStyles'
 
-export const SectionTechnologies = styled(Section)`
+export const SectionTechnologies = styled(SubSection)`
   padding-top: 0;
 `
 

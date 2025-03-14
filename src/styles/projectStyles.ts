@@ -5,7 +5,7 @@ import { Section, Container as GlobalContainer } from './commonStyles'
 export const Container = styled.main``
 
 export const SectionAllProjects = styled(Section)`
-  padding-top: 4rem;
+  padding-block: 4rem;
 `
 
 export const ContainerAllProjects = styled(GlobalContainer)`
